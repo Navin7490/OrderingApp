@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ProfileFragment">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ViewFlipper
+            android:id="@+id/profileViewFlipper"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="0dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/areaProfile"
+                    android:layout_width="match_parent"
+                    android:visibility="invisible"
+                    android:paddingBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ImProfile"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="33dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@mipmap/ic_action_profile_placeholder"
+                        app:civ_circle_background_color="@color/app_bg_gray"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/vGuide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.35"/>
+                    <TextView
+                        android:id="@+id/kFirstNameTV"
+                        android:text="First name:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toBottomOf="@+id/ImProfile"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/app_text_black"
+                        app:layout_constraintEnd_toEndOf="@+id/vGuide"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        android:layout_marginTop="42dp"/>
+                    <TextView
+                        android:id="@+id/tvfirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/ImProfile"
+
+                        app:layout_constraintStart_toEndOf="@+id/kFirstNameTV"
+                        android:layout_marginTop="42dp"
+                        android:layout_width="0dp"
+                        android:textColor="@color/app_text_black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/kLastNameTV"
+                        android:text="Last name:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/app_text_black"
+                        app:layout_constraintEnd_toEndOf="@+id/vGuide"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        app:layout_constraintTop_toBottomOf="@id/tvfirstName"
+                        android:layout_marginTop="25dp"/>
+
+                    <TextView
+                        android:id="@+id/tvLastName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvfirstName"
+
+                        app:layout_constraintStart_toEndOf="@+id/kFirstNameTV"
+                        android:layout_marginTop="25dp"
+                        android:layout_width="0dp"
+                        android:textColor="@color/app_text_black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginStart="20dp"
+
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/kEmailIdTV"
+                        android:text="Email id:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/app_text_black"
+                        app:layout_constraintEnd_toEndOf="@+id/vGuide"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        app:layout_constraintTop_toBottomOf="@id/kLastNameTV"
+                        android:layout_marginTop="25dp"/>
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        app:layout_constraintTop_toBottomOf="@+id/tvLastName"
+
+                        app:layout_constraintStart_toEndOf="@+id/kEmailIdTV"
+                        android:layout_marginTop="25dp"
+                        android:layout_width="0dp"
+                        android:textColor="@color/app_text_black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/kPhoneNumberTV"
+                        android:text="Phone number:"
+                        android:layout_width="0dp"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/app_text_black"
+                        app:layout_constraintEnd_toEndOf="@+id/vGuide"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        app:layout_constraintTop_toBottomOf="@id/tvEmail"
+                        android:layout_marginTop="25dp"/>
+                    <TextView
+                        android:id="@+id/tvPhone"
+                        app:layout_constraintTop_toBottomOf="@+id/tvEmail"
+                        app:layout_constraintStart_toEndOf="@+id/kPhoneNumberTV"
+                        android:layout_marginTop="28dp"
+                        android:layout_width="0dp"
+                        android:textColor="@color/app_text_black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/kAddressrTV"
+                        android:text="Address:"
+                        android:layout_width="0dp"
+                        android:visibility="invisible"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/app_text_black"
+                        app:layout_constraintEnd_toEndOf="@+id/vGuide"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        app:layout_constraintTop_toBottomOf="@id/kPhoneNumberTV"
+                        android:layout_marginTop="25dp"/>
+
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        app:layout_constraintTop_toBottomOf="@+id/tvPhone"
+                        app:layout_constraintStart_toEndOf="@+id/kPhoneNumberTV"
+                        android:layout_marginTop="25dp"
+                        android:layout_width="0dp"
+                        android:textColor="@color/app_text_black"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_height="60dp"/>
+
+                    <TextView
+                        android:id="@+id/tvViewQRCode"
+                        android:layout_marginEnd="62.5dp"
+                        android:layout_marginStart="62.5dp"
+                        android:layout_marginTop="39dp"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="14sp"
+                        android:text="View QR Code"
+                        android:textColor="@color/app_text_black"
+                        android:gravity="center"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/dividerAddress"
+                        android:layout_marginEnd="62.5dp"
+                        android:layout_marginStart="62.5dp"
+                        android:layout_marginTop="39dp"
+                        android:background="@drawable/drawable_divider"
+                        app:layout_constraintTop_toBottomOf="@+id/tvViewQRCode"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_width="0dp"
+                        android:layout_height="3dp"/>
+
+                    <TextView
+                        android:id="@+id/tvHelpAndSupport"
+                        android:layout_width="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="16sp"
+                        android:layout_marginStart="60dp"
+                        android:textColor="@color/app_bg_blue"
+                        android:text="HelpSupport"
+                        android:layout_marginTop="35dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dividerAddress"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tvRate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_width="wrap_content"
+                        android:text="Rate the app"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="60dp"
+                        android:textColor="@color/app_bg_blue"
+                        android:layout_marginTop="35dp"
+                        app:layout_constraintTop_toBottomOf="@+id/dividerAddress"
+                        android:layout_height="wrap_content"/>
+
+
+                    <TextView
+                        android:id="@+id/tvappVersion"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:text="App version: 1.0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="12sp"
+                        android:layout_marginTop="125dp"
+                        app:layout_constraintTop_toBottomOf="@+id/tvRate"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/app_text_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+            <androidx.core.widget.NestedScrollView
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/scrollView"
+                android:fillViewport="true">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:paddingBottom="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ImProfileE"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="33dp"
+                        app:civ_circle_background_color="@color/app_bg_gray"
+                        android:src="@mipmap/ic_action_profile_placeholder"
+                        android:backgroundTint="@color/app_bg_gray"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILFirstName"
+                        app:layout_constraintTop_toBottomOf="@+id/ImProfileE"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="42dp"
+                        android:hint="First name"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFirstname"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="textPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILLastName"
+                        android:hint="Last name"
+                        app:layout_constraintTop_toBottomOf="@+id/TILFirstName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLastName"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="textPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILEmailId"
+                        android:hint="Email"
+                        app:layout_constraintTop_toBottomOf="@+id/TILLastName"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailId"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:longClickable="false"
+                            android:maxEms="10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILPhoneNumber"
+                        android:hint="Phone number"
+                        app:layout_constraintTop_toBottomOf="@+id/TILEmailId"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPhone"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILHouseNo"
+                        android:hint="House no."
+                        app:layout_constraintTop_toBottomOf="@+id/TILPhoneNumber"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etHouseNo"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:maxEms="10"
+                            android:inputType="number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILSocietyAppartment"
+                        android:hint="Society / apartment name"
+                        app:layout_constraintTop_toBottomOf="@+id/TILHouseNo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSocietyAppartment"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="textPersonName"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILArea"
+                        android:hint="Area"
+                        app:layout_constraintTop_toBottomOf="@+id/TILSocietyAppartment"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etArea"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="textPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILCityState"
+                        android:hint="City,state"
+                        app:layout_constraintTop_toBottomOf="@+id/TILArea"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCityState"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="textPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TILPinCode"
+                        android:hint="Pincode"
+                        app:layout_constraintTop_toBottomOf="@+id/TILCityState"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        app:boxBackgroundColor="@color/app_text_white"
+                        style="@style/TextInputLayoutTheme"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPinCode"
+                            android:textColor="@color/app_bg_blue"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="16sp"
+                            android:inputType="number"
+                            android:maxEms="6"
+                            android:maxLength="6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    <Button
+                        android:id="@+id/btnUpdateProfile"
+                        app:layout_constraintTop_toBottomOf="@+id/TILPinCode"
+                        android:text="Update Profile"
+                        android:textColor="@color/app_bg_white"
+                        android:background="@drawable/drawable_searchedit"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="35dp"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textAllCaps="false"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"/>
+
+              <com.hbb20.CountryCodePicker
+                  android:id="@+id/ccp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:visibility="gone"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+            </androidx.core.widget.NestedScrollView>
+
+        </ViewFlipper>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:padding="8dp" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

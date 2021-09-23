@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/start_end_margin"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        android:layout_marginStart="@dimen/start_end_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="10dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/bottomsheet"
+            android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/imageViewSellersProductImageUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="148dp"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/drawable_product_addbutton"
+                    android:requiresFadingEdge="vertical"
+                    android:src="@drawable/ic_placeholder"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+
+            <TextView
+                android:id="@+id/textViewSellersName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Subway shsasas"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="20sp"
+                android:textColor="@color/app_text_black"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSellersProductImageUrl"
+                android:layout_marginTop="11.5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/ButtonSellersSubscribe"
+
+                android:layout_marginStart="@dimen/start_end_margin"
+                />
+
+            <TextView
+                android:id="@+id/textViewSellersSmallInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Tea • Coffee • Toast"
+                android:textColor="@color/app_text_gray"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSellersName"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="@dimen/start_end_margin"
+                app:layout_constraintEnd_toStartOf="@+id/ButtonSellersSubscribe"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="@dimen/inner_start_end_margin"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/ButtonSellersSubscribe"
+                android:layout_width="129dp"
+                android:layout_height="38dp"
+                tools:text="Subscribe"
+                android:textColor="@color/app_text_white"
+                android:textSize="13sp"
+                android:textAllCaps="false"
+                android:background="@drawable/drawable_subscribebutton"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                app:layout_constraintStart_toEndOf="@+id/textViewSellersName"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewSellersProductImageUrl"
+                android:layout_marginTop="16dp"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

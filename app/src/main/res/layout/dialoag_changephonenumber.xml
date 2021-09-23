@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Change Phone Number"
+                android:id="@+id/textChangeNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_below="@+id/textChangeNumber"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/drawable_registration_editext"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="45sp" />
+
+            <EditText
+                android:id="@+id/tvDialogChangeNumber"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_below="@+id/textChangeNumber"
+                android:hint="Phone"
+                android:inputType="number"
+                android:maxLength="12"
+                android:layout_marginStart="@dimen/_105sdp"
+                android:padding="10sp"
+                android:background="@drawable/drawable_registration_editext"
+                android:layout_width="match_parent"
+                android:layout_height="45sp" />
+
+            <Button
+                android:id="@+id/btnDialogCancel"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="cancel"
+                android:textColor="@color/app_text_white"
+                android:background="?android:colorPrimary"
+                android:layout_below="@+id/tvDialogChangeNumber"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnDialogOk"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="get otp"
+                android:textColor="@color/app_text_white"
+                android:layout_alignParentEnd="true"
+                android:background="?android:colorPrimary"
+                android:layout_below="@+id/tvDialogChangeNumber"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

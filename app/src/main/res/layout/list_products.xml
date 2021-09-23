@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_bg_white"
+    android:paddingBottom="@dimen/start_end_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imageProductbg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/drawable_product_addbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="@dimen/start_end_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/start_end_margin"
+        tools:ignore="ContentDescription">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageVariations"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            app:shapeAppearanceOverlay="@style/roundCornerImageView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Tea"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/app_text_black"
+        app:layout_constraintStart_toEndOf="@+id/imageProductbg"
+        android:layout_marginStart="@dimen/inner_start_end_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/start_end_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="124dp"
+        />
+    <TextView
+        android:id="@+id/tvVariationName"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        tools:text="Tea"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/app_text_gray"
+        app:layout_constraintStart_toEndOf="@+id/imageProductbg"
+        android:layout_marginStart="@dimen/inner_start_end_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tvProductName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="124dp"
+        />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="$10"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/app_text_gray"
+        app:layout_constraintTop_toBottomOf="@+id/tvVariationName"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/tvProductName"
+        app:layout_constraintEnd_toEndOf="@+id/tvProductName"
+        />
+
+    <Button
+        android:id="@+id/itemAddToCartButton"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
+        android:text="Add"
+        android:textSize="13sp"
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/drawable_searchedit"
+        android:backgroundTint="@color/app_bg_blue"
+        android:textColor="@color/app_text_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/plusImageView"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_add"
+        app:tint="@color/app_bg_white"
+        app:layout_constraintEnd_toEndOf="@id/itemAddToCartButton"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintTop_toTopOf="@id/itemAddToCartButton"
+        android:layout_marginTop="8dp"
+        tools:ignore="ContentDescription"
+        android:translationZ="3dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/productListStepperView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stepper"
+            android:layout_width="100dp"
+            android:layout_height="38dp"
+            android:background="@color/app_bg_gray">
+
+            <ImageButton
+                android:id="@+id/stepperMinusImageButton"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_remove"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/app_bg_gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/stepperQuantityTv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:textSize="15sp"
+                android:textColor="@color/app_bg_blue"
+                tools:text="123"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_vertical|center_horizontal"
+                app:layout_constraintStart_toEndOf="@+id/stepperMinusImageButton"
+                app:layout_constraintEnd_toStartOf="@+id/stepperPlusImageButton" />
+
+            <ImageButton
+                android:id="@+id/stepperPlusImageButton"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@color/app_bg_gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="ContentDescription"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/customizableTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customizable"
+        android:textSize="10sp"
+        android:visibility="gone"
+        android:textColor="@color/app_text_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvProductPrice"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

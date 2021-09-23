@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartSubTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_product_addbutton"
+        android:layout_marginTop="@dimen/start_end_margin"
+        android:layout_marginEnd="@dimen/start_end_margin"
+        app:cardElevation="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/app_text_black"
+        android:gravity="center"
+        android:text="Earn credits playing trivia after checkout!"
+        app:layout_goneMarginTop="@dimen/start_end_margin">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_gravity="center"
+            android:padding="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvListDeliveryFeeName"
+                android:text="Subtotal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:textColor="@color/app_text_gray"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvListDeliveryFeePrice"
+                android:text="1253"
+                android:textColor="@color/app_text_gray"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="₹"
+                android:visibility="gone"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/tvListDeliveryFeePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="@dimen/inner_start_end_margin"
+                app:layout_constraintTop_toBottomOf="@+id/tvListDeliveryFeeName"
+                android:background="@drawable/drawable_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

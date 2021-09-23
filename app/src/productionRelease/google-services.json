@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "874842667055",
+    "project_id": "quickbite-8f32a",
+    "storage_bucket": "quickbite-8f32a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874842667055:android:4f945c6893658ad0b66eda",
+        "android_client_info": {
+          "package_name": "com.yorder.partner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874842667055-j6epdvg8k89102j211u9fs8j457khjjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUGg77D39DjYxh19JRzFDAQx7nLuTFtP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874842667055-j6epdvg8k89102j211u9fs8j457khjjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874842667055:android:c8263cace44bdb00b66eda",
+        "android_client_info": {
+          "package_name": "com.yorder.shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874842667055-j6epdvg8k89102j211u9fs8j457khjjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUGg77D39DjYxh19JRzFDAQx7nLuTFtP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874842667055-j6epdvg8k89102j211u9fs8j457khjjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

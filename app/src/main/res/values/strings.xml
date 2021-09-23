@@ -1,0 +1,59 @@
+<resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Yorder</string>
+    <string name="new_user_sign_up">New user Sign up</string>
+    <string name="get_otp">get otp</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="or">OR</string>
+    <string name="signup">&lt;u>SIGNUP&lt;/u></string>
+    <string name="log_in">&lt;u>LOG IN&lt;/u></string>
+    <string name="resend_otp">&lt;u>resend the OTP&lt;/u></string>
+    <string name="help_support">&lt;u>Help &amp; Support&lt;/u></string>
+    <string name="edit">&lt;u>EDIT&lt;/u></string>
+    <string name="viewQRCode">&lt;u>View QR Code&lt;/u></string>
+    <string name="apprate">&lt;u>Rate the app&lt;/u></string>
+    <string name="login_with_otp">&lt;u>LOG in with OTP&lt;/u></string>
+    <string name="notes">&lt;b>Note:&lt;/b> %1$s</string>
+    <string name="login">&lt;u>LOGIN&lt;/u></string>
+    <string name="forgot_password">&lt;u>Forgot Password?&lt;/u></string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="quickBit">QuickBit</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">verify</string>
+    <string name="phone_exist">This credential is already associated with a different user account.</string>
+    <string name="otp_wrong">The sms verification code used to create the phone auth credential is invalid. Please resend the verification code sms and be sure use the verification code provided by the user.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">default_notification_channel_id</string>
+    <string name="fcm_message">fcm_message</string>
+    <string name="msg_token_fmt">msg_token_fmt</string>
+    <string name="ok">OK</string>
+    <string name="have_account_click_here">have Account click here</string>
+    <string name="sellers">SELLERS</string>
+    <string name="orders">ORDERS</string>
+    <string name="cart">CART</string>
+    <string name="profile">PROFILE</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="variation">Variation</string>
+    <string name="addOns">AddOns</string>
+
+    <array name="discover">
+
+        <item name="Nearby">Nearby</item>
+        <item name="Nearby">Nearby</item>
+        <item name="Nearby">Nearby</item>
+        <item name="Nearby">Nearby</item>
+        <item name="Nearby">Nearby</item>
+
+
+    </array>
+
+    <string name="amount">%1$s</string>
+    <string name="yorder">YORDER</string>
+    <string name="home_search_hint">What are you looking for?</string>
+
+
+</resources>

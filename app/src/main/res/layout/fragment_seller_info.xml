@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+   <data>
+
+   </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/areaTop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="24.16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvSIShopName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/app_bg_blue"
+                    android:textSize="24sp"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:text="Chai Wai"
+                    app:layout_constraintEnd_toStartOf="@+id/tvSISubscribe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSIShopSmallInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cafe.Food.Snack"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/app_text_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSIShopName" />
+
+                <TextView
+                    android:id="@+id/tvProductListTitileLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginEnd="@dimen/start_end_margin"
+                    android:background="@drawable/drawable_divider"
+                    android:fontFamily="@font/poppins_regular"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSIShopSmallInfo" />
+                <TextView
+                    android:id="@+id/tvSISubscribe"
+                    android:text="Requested"
+                    android:textAllCaps="false"
+                    android:textColor="@color/app_text_black"
+                    android:visibility="invisible"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:gravity="center"
+                    android:elevation="5dp"
+                    android:background="@drawable/drawable_searchedit"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/start_end_margin"
+                    android:layout_width="104dp"
+                    android:layout_height="38dp"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RvSellerInfo"
+            tools:listitem="@layout/list_discover"
+            app:layout_constraintTop_toBottomOf="@+id/areaTop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+        <TextView
+            android:id="@+id/address"
+            android:text="Address :"
+            android:textSize="14sp"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/app_text_black"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RvSellerInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSIAddress"
+            app:layout_constraintTop_toBottomOf="@+id/RvSellerInfo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/address"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/app_text_gray"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="60dp"
+            android:text="2,Umiya vijay complex statilite Road Navragpuraahmedabad"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:layout_width="0dp"
+            android:layout_height="37dp"/>
+        <TextView
+            android:id="@+id/phone"
+            android:text="Phone :"
+            android:textSize="14sp"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/app_text_black"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSIAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvSIPhone"
+            app:layout_constraintTop_toBottomOf="@+id/tvSIAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/phone"
+            android:text="+916355516937, +917490967163"
+            android:layout_marginTop="22dp"
+            android:textColor="@color/app_text_gray"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:paddingTop="2dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/btnSIViewItems"
+            app:layout_constraintTop_toBottomOf="@+id/phone"
+            android:gravity="center"
+            android:textColor="@color/app_text_white"
+            android:layout_marginTop="46dp"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/drawable_searchedit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            android:text="View items"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:visibility="gone"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:padding="8dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
